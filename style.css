@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    /* Primary */
+    --violet-color: hsl(263, 55%, 52%);
+    --dark-greyish: hsl(217, 19%, 35%);
+    --dark-blackish:hsl(219, 29%, 14%);
+    --white:hsl(0, 0%, 100%);
+    /* Neutral */
+    --light-grey:hsl(0, 0%, 81%);
+    --light-grey-blue:hsl(210, 46%, 95%);
+    /* Font */
+    --barlow:"Barlow Semi Condensed", sans-serif;
+}
+
+body{
+    background-color: var(--light-grey-blue);
+    font: 13px var(--barlow);
+    color: var(--dark-blackish);
+}
+.wrapper{
+    padding-inline: 2rem;
+    max-width: 1100px;
+    margin-inline: auto;
+    margin-block: 4rem 1rem;
+}
+/* Layout */
+.grid-layout{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:1rem ;
+
+}
+/* Testimonial */
+.testimonial{
+    border-radius: 8px;
+    padding: 1.3rem;
+    background-color: var(--white);
+    margin-block: 0.6rem;
+}
+
+.violet-bg{
+    background-color: var(--violet-color);
+    color: var(--white);
+}
+.dark-grey-bg{
+    background-color: var(--dark-blackish);
+    color: var(--white);
+}
+.light-grey-bg{
+    background-color: var(--dark-greyish);
+    color: var(--white);
+}
+.light-bg{
+    background-color: var(--white);
+    color: var(--dark-greyish);
+}
+
+/* Testimonial Header */
+.testimonial__header{
+    display: flex;
+    gap: 1rem;
+    color: var(--white);
+}
+
+
+/* Image */
+.testimonial-img img{
+    border-radius: 50%;
+    width: 32px;
+
+}
+.img-border img{
+    border: 2px solid #9061dce0;
+}
+/* Title */
+.title-sub{
+    font-size: 12px;
+    opacity: 0.5;
+}
+/* Testimonial content */
+
+.content-main{
+    font-size: 1rem;
+}
+.content-main{
+    padding: 1rem;
+    line-height: 1.3;
+    font-weight: 600;
+}
+.content-text{
+    padding: 0.8rem;
+    line-height: 1.4;
+    opacity: 0.7;
+}
+
+
+@media (min-width:880px) {
+    /* Layout desktop */
+
+.testimonial:nth-child(1){
+    grid-area: one;
+}
+.testimonial:nth-child(2){
+    grid-area: two;
+}
+.testimonial:nth-child(3){
+    grid-area: three;
+}
+.testimonial:nth-child(4){
+    grid-area: four;
+}
+.testimonial:nth-child(5){
+    grid-area: five;
+}
+    .grid-layout{
+        grid-auto-columns: 1fr;
+        grid-template-areas: 
+        'one one two five'
+        'three four four five'
+
+        ;
+    }
+}
