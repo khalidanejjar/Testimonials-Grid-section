@@ -16,6 +16,9 @@
     /* Font */
     --barlow:"Barlow Semi Condensed", sans-serif;
 }
+.dark-font{
+    color: var(--dark-blackish);
+}
 
 body{
     background-color: var(--light-grey-blue);
